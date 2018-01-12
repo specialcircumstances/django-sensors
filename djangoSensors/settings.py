@@ -31,12 +31,15 @@ ALLOWED_HOSTS = [ 'sensorlog', 'sensorlog.home', 'localhost', '127.0.0.1' ]
 # Application definition
 
 INSTALLED_APPS = [
+    'readings.apps.ReadingsConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'rest_framework',
+    'bootstrap4',
 ]
 
 MIDDLEWARE = [

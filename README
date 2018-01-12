@@ -2,4 +2,21 @@ README for django-sensors
 
 Django based project to log all manner of sensor data.
 
+Also uses:
+  django-rest_framework
+  django-bootstrap4
 
+  mariadb at the backend
+
+Current Dev Environment (on CentOS 7)
+
+amqp==2.2.2
+billiard==3.5.0.3
+celery==4.1.0
+Django==2.0.1
+django-bootstrap4==0.0.5
+djangorestframework==3.7.7
+kombu==4.1.0
+mysqlclient==1.3.12
+pytz==2017.3
+vine==1.1.4

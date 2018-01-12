@@ -1,0 +1,14 @@
+{# Load the tag library #}
+{% load bootstrap4 %}
+
+{# Load CSS and JavaScript #}
+{% bootstrap_css %}
+{% bootstrap_javascript %}
+
+{# Display django.contrib.messages as Bootstrap alerts #}
+{% bootstrap_messages %}
+
+
+<h2>{{ message }}</h2>
+
+{% buttons submit='OK' reset="Cancel" %}{% endbuttons %}
