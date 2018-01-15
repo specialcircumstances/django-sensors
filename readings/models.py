@@ -26,8 +26,7 @@ class Device(models.Model):
     ipaddress = models.GenericIPAddressField("IP Address")
     authentication = models.BooleanField("Authentication", blank=False,
         default=False)
-    authString = models.CharField("Authentication String",
-        db_index=True, max_length=64)
+    authString = models.CharField("Authentication String", max_length=64)
 
     def get_absolute_url(self):
         return reverse('readings:device', args={self.pk})
@@ -126,8 +125,8 @@ class Sensor(models.Model):
         return myresponse
 
 class Reading(models.Model):
-    readingInt = models.IntegerField("Integer Reading")
-    readingFloat = models.FloatField("Floating Point Reading")
+    readingInt = models.IntegerField("Integer Reading", blank=True, null=True)
+    readingFloat = models.FloatField("Floating Point Reading", blank=True, null=True)
     sensor = models.ForeignKey(Sensor, on_delete=models.CASCADE)
     sensor_timestamp = models.DateField("Sensor Timestamp",
         blank=True, null=True)
